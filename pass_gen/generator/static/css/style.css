@@ -1,0 +1,28 @@
+
+.head {
+    position: relative;
+    color: white;
+    font-size: 70px;
+    display: inline-block;
+    top: 200px;
+    left: 400px;
+}
+.vid {
+    
+    position:absolute;
+    z-index:-1;
+    top:0;
+    left:0;
+    width:100px; 
+    height:20px;
+}
+
+.content {
+    position: relative;
+    display: block;
+    top: 200px;
+    left: 680px;   
+    top: 250px;
+    color: white;
+    font-size: 20px;
+}

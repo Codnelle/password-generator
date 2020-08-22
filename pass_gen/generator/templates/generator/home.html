@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="/static/css/style.css?{% now 'U' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="vid">
+  <video  src="/static/images/video(22).mp4" 8s autoplay loop >
+  </video>
+</div>
+
+  <div class="head">PASSWORD GENERATOR</div>
+     
+    
+    <div class="content">
+       
+    <form action="{% url 'password' %}">
+      <select name="length">
+          <option value= "6">6</option>
+          <option value= "4">4</option>
+          <option value= "8">8</option>
+          <option value= "1">1</option>
+          
+          <option value= "100">100</option>
+          <option value= "9">9</option>
+          <option value= "5">5</option>
+          <option value= "2">2</option>
+          <option value= "3">3</option>
+          <option value= "20" selected="selected">20</option>
+          <option value= "11">11</option>
+          <option value= "12">12</option>
+      </select>  Select Length
+     
+     
+      <br>
+      <input type="checkbox" name="uppercase">&nbsp;  Uppercase
+      <br>
+      <input type="checkbox" name="numbers">&nbsp;  Numbers
+      <br>
+      <input type="checkbox" name="symbols">&nbsp;  Symbols
+    <br><br>
+      <input type="submit" value="Generate Password">
+    </form>
+  </div>
+</body>
+</html>
